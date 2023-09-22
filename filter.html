@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>numbers</title>
+</head>
+<script>
+    let numbers= [273,52,103,32,57,24,76,95,65];
+    numbers = numbers.filter((x) => x % 2 == 1);   //홀수만 추출
+    numbers = numbers.filter((x) => x <= 100);    // 100이하의 수 추출
+    numbers = numbers.filter((x) => x % 5 == 0); //5의 배수 추출
+
+        console.log(numbers);
+
+</script>
+<body>
+    
+</body>
+</html>

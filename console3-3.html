@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+<script>
+    const max = function(first, ...rests){
+        let output;
+        let items;
+
+        if (Array.isArray(first)) { // First가 배열인지 확인
+            output = first[0]
+            items = first    //전체 배열을 items에 할당
+        } else if (typeof(first) === 'number'){ //first가 숫자인지 확인
+            output = first 
+            items = rests    //나머지 인수들을 items에 할당
+        }
+        for(const data of items){
+            if (output < data) {
+              output = data 
+            }
+        }
+        return output;
+    }
+    console.log(`max(배열):${max[1,2,3,4]}`) //배열
+    console.log(`max(숫자, ...): ${max(1,2,3,4)}`) //숫자
+//숫자 or 배열 or 객체 어떤것이든 다 더할 수 있게 코딩 필요
+</script>
+</head>
+<body></body>
+</html>
